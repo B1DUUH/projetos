@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <title>Calculadora de Financiamento</title>
+</head>
+<body>
+
+  <h1>Calculadora de Financiamento</h1>
+
+  <label for="valor">Valor financiado (R$):</label>
+  <input type="number" id="valor" step="0.01">
+
+  <label for="juros">Taxa de juros mensal (%):</label>
+  <input type="number" id="juros" step="0.01">
+
+  <label for="parcelas">Número de parcelas:</label>
+  <input type="number" id="parcelas">
+
+  <label for="tipo">Tipo de financiamento:</label>
+  <select id="tipo">
+    <option value="PRICE">PRICE</option>
+    <option value="SAC">SAC</option>
+  </select>
+
+  <button onclick="calcular()">Calcular</button>
+
+  <div id="resultado"></div>
+
+  <script src="script,js"></script>
+
+</body>
+</html>

@@ -1,0 +1,81 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  background-color: #222;
+  color: #fff;
+}
+
+#menu {
+  margin-top: 50px;
+}
+
+#game {
+  display: none;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+#gameArea {
+  position: relative;
+  width: 600px;
+  height: 400px;
+  margin: 20px auto;
+  border: 2px solid #333;
+  background-color: #f5f5f518;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+#score, #timer {
+  font-size: 24px;
+  margin: 10px;
+}
+
+#circle {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: red;
+  border-radius: 50%;
+  display: none;
+  cursor: pointer;
+}
+
+select, button {
+  padding: 10px;
+  font-size: 16px;
+  margin: 10px;
+}
+
+ol {
+  list-style: decimal;
+  padding-left: 20px;
+  text-align: left;
+  display: inline-block;
+}
+
+.explosion {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  pointer-events: none;
+  background: radial-gradient(circle, rgba(255, 0, 0, 0.8) 0%, transparent 70%);
+  animation: explode 0.4s ease-out forwards;
+  z-index: 999;
+}
+
+@keyframes explode {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2.5);
+    opacity: 0;
+  }
+}
